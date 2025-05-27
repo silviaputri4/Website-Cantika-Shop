@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Akun - Cantika Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe0ec, #ffe8f0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #b30059;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #ffcce0;
+      border-radius: 10px;
+      background-color: #fff9fb;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #ff66a3;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      margin-top: 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+
+    .footer-note {
+      font-size: 12px;
+      color: #999;
+      margin-top: 20px;
+    }
+
+    .register-option {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .register-option a {
+      color: #ff3385;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-option a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Login Akun</h1>
+    <p>Masuk untuk lanjut belanja di Cantika Shop 🛍️</p>
+
+    <input type="email" placeholder="Email" required /><br/>
+    <input type="password" placeholder="Password" required /><br/>
+
+    <button onclick="login()">Login</button>
+
+    <div class="register-option">
+      Belum punya akun? <a href="daftar.html">Daftar Sekarang</a>
+    </div>
+
+    <p class="footer-note">Selamat datang kembali di Cantika Shop 💕</p>
+  </div>
+
+  <script>
+    function login() {
+      // Simulasi login sukses
+      localStorage.setItem('isLoggedIn', 'true');
+      alert("Login berhasil! Selamat berbelanja.");
+      window.location.href = "produk.html";
+    }
+  </script>
+</body>
+</html>

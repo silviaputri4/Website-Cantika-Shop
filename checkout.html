@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Cantika Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --pink-light: #ffebf3;
+      --pink-medium: #ff66a3;
+      --pink-dark: #e60073;
+      --purple-light: #e2d1f9;
+      --white: #ffffff;
+      --gray-light: #f8f8f8;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--pink-light);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: var(--white);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(90deg, #ff66a3, #ff99cc, #ff66a3);
+    }
+    
+    h1 {
+      text-align: center;
+      color: var(--pink-dark);
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    
+    .checkout-section {
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      font-size: 20px;
+      color: var(--pink-dark);
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--pink-light);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--pink-medium);
+      outline: none;
+    }
+    
+    .order-summary {
+      background-color: var(--gray-light);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .order-total {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--pink-dark);
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px dashed #ddd;
+    }
+    
+    .btn {
+      display: block;
+      background: linear-gradient(90deg, var(--pink-medium), #ff8fab);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      margin: 30px auto 0;
+      width: 100%;
+      max-width: 300px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 102, 163, 0.3);
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 102, 163, 0.4);
+      background: linear-gradient(90deg, #ff5599, #ff7d9d);
+    }
+    
+    .btn-back {
+      background: white;
+      color: var(--pink-medium);
+      border: 1px solid var(--pink-medium);
+      margin-top: 15px;
+    }
+    
+    .btn-back:hover {
+      background: var(--pink-medium);
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        margin: 15px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-credit-card"></i> Checkout</h1>
+    
+    <form id="checkout-form">
+      <div class="checkout-section">
+        <h2 class="section-title">Informasi Pengiriman</h2>
+        
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="telepon">Nomor Telepon</label>
+          <input type="tel" id="telepon" name="telepon" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="alamat">Alamat Lengkap</label>
+          <textarea id="alamat" name="alamat" rows="3" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="kota">Kota/Kabupaten</label>
+          <input type="text" id="kota" name="kota" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="kodepos">Kode Pos</label>
+          <input type="text" id="kodepos" name="kodepos" required>
+        </div>
+      </div>
+      
+      <div class="checkout-section">
+        <h2 class="section-title">Metode Pengiriman</h2>
+        
+        <div class="form-group">
+          <label for="kurir">Pilih Kurir</label>
+          <select id="kurir" name="kurir" required>
+            <option value="">-- Pilih Kurir --</option>
+            <option value="jne">JNE</option>
+            <option value="tiki">TIKI</option>
+            <option value="pos">POS Indonesia</option>
+            <option value="jnt">J&T Express</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="checkout-section">
+        <h2 class="section-title">Metode Pembayaran</h2>
+        
+        <div class="form-group">
+          <label>
+            <input type="radio" name="pembayaran" value="transfer" checked> Transfer Bank
+          </label>
+          <label>
+            <input type="radio" name="pembayaran" value="cod"> COD (Bayar di Tempat)
+          </label>
+          <label>
+            <input type="radio" name="pembayaran" value="ewallet"> E-Wallet (OVO/Gopay/DANA)
+          </label>
+        </div>
+      </div>
+      
+      <div class="order-summary">
+        <h2 class="section-title">Ringkasan Pesanan</h2>
+        <div id="order-items">
+          <!-- Item pesanan akan dimuat di sini -->
+        </div>
+        <div class="order-total">
+          <span>Total:</span>
+          <span id="order-total">Rp 0</span>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn">Konfirmasi Pembayaran</button>
+      <a href="keranjang.html" class="btn btn-back">Kembali ke Keranjang</a>
+    </form>
+  </div>
+
+  <script>
+    // Ambil data checkout dari localStorage
+    const checkoutData = JSON.parse(localStorage.getItem("checkoutData"));
+    const orderItemsDiv = document.getElementById("order-items");
+    const orderTotalSpan = document.getElementById("order-total");
+    const checkoutForm = document.getElementById("checkout-form");
+
+    // Tampilkan data pesanan
+    if (checkoutData && checkoutData.items) {
+      checkoutData.items.forEach(item => {
+        const itemDiv = document.createElement("div");
+        itemDiv.className = "order-item";
+        itemDiv.innerHTML = `
+          <span>${item.nama} (${item.jumlah || 1}x)</span>
+          <span>Rp ${(item.harga * (item.jumlah || 1)).toLocaleString()}</span>
+        `;
+        orderItemsDiv.appendChild(itemDiv);
+      });
+      
+      orderTotalSpan.textContent = checkoutData.total;
+    } else {
+      // Jika tidak ada data, redirect kembali ke keranjang
+      window.location.href = "keranjang.html";
+    }
+
+    // Proses form checkout
+    checkoutForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      // Simpan data pembeli
+      const buyerData = {
+        nama: document.getElementById("nama").value,
+        telepon: document.getElementById("telepon").value,
+        alamat: document.getElementById("alamat").value,
+        kota: document.getElementById("kota").value,
+        kodepos: document.getElementById("kodepos").value,
+        kurir: document.getElementById("kurir").value,
+        pembayaran: document.querySelector('input[name="pembayaran"]:checked').value,
+        tanggal: new Date().toISOString()
+      };
+      
+      // Gabungkan data
+      const completeOrder = {
+        ...buyerData,
+        items: checkoutData.items,
+        total: checkoutData.total
+      };
+      
+      // Simpan ke localStorage (simulasi database)
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+      orders.push(completeOrder);
+      localStorage.setItem("orders", JSON.stringify(orders));
+      
+      // Kosongkan keranjang
+      localStorage.removeItem("cart");
+      
+      // Redirect ke halaman terima kasih
+      window.location.href = "terimakasih.html";
+    });
+  </script>
+</body>
+</html>

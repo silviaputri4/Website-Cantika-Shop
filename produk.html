@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk - Cantika Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffc0cb;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #b30059;
+    }
+    nav {
+      background-color: #f8d7e5;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+    }
+    nav a:hover {
+      color: #ff66a3;
+    }
+    .sidebar {
+      width: 140px;
+      background-color: #f8d7e5;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      height: auto;
+    }
+    .sidebar h2 {
+      font-size: 16px;
+      text-align: center;
+      color: #b30059;
+      margin-bottom: 10px;
+    }
+    .sidebar a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    .sidebar a:hover {
+      background-color: #ff66a3;
+      color: white;
+    }
+    .products {
+      margin-left: 170px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .product-card {
+      width: 220px;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+    .product-card p {
+      margin: 0;
+      font-weight: bold;
+      color: #b30059;
+    }
+    .product-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff66a3;
+      color: white;
+      cursor: pointer;
+    }
+    .product-card button:hover {
+      background-color: #ff3385;
+    }
+    .category-title {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+      color: #b30059;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Produk Cantika Shop</h1>
+    <p>Temukan produk cantik terbaik untukmu 💄✨</p>
+  </header>
+  <nav>
+    <a href="Toko Kosmetik.html">Beranda</a>
+    <a href="keranjang.html">Keranjang</a>
+  </nav>
+  
+  <div class="sidebar">
+    <h2>Kategori</h2>
+    <a href="#makeup">Make Up</a>
+    <a href="#skincare">Skin Care</a>
+    <a href="#bodycare">Body Care</a>
+    <a href="#haircare">Hair Care</a>
+  </div>
+
+  <!-- Kategori Make Up -->
+  <section class="products">
+    <h2 class="category-title" id="makeup">Make Up</h2>
+    
+    <div class="product-card">
+      <img src="G1.jpg" alt="Promo Set Make Up">
+      <h3>Promo Set Make Up</h3>
+      <p>Rp 400.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Promo%20Set%20Make%20Up')">Beli via WA</button>
+      <button onclick="addToCart('Promo Set Make Up', 400000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G2.jpg" alt="Blush On Palette Make Over">
+      <h3>Blush On Palette Make Over</h3>
+      <p>Rp 100.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Blush%20On%20Palette%20Make%20Over')">Beli via WA</button>
+      <button onclick="addToCart('Blush On Palette Make Over', 100000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G3.jpg" alt="Lipstik Sea Make Up">
+      <h3>Lipstik Sea Make Up</h3>
+      <p>Rp 40.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipstik%20Sea%20Make%20Up')">Beli via WA</button>
+      <button onclick="addToCart('Lipstik Sea Make Up', 40000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G4.jpg" alt="Compact Powder Make Over">
+      <h3>Compact Powder Make Over</h3>
+      <p>Rp 105.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Compact%20Powder%20Make%20Over')">Beli via WA</button>
+      <button onclick="addToCart('Compact Powder Make Over', 105000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G5.jpg" alt="Loose Powder Make Over">
+      <h3>Loose Powder Make Over</h3>
+      <p>Rp 110.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Loose%20Powder%20Make%20Over')">Beli via WA</button>
+      <button onclick="addToCart('Loose Powder Make Over', 110000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G6.jpg" alt="Blush On IMPLORA">
+      <h3>Blush On IMPLORA</h3>
+      <p>Rp 18.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Blush%20On%20IMPLORA')">Beli via WA</button>
+      <button onclick="addToCart('Blush On IMPLORA', 18000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G7.jpg" alt="Blush On Make Over">
+      <h3>Blush On Make Over</h3>
+      <p>Rp 55.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Blush%20On%20Make%20Over')">Beli via WA</button>
+      <button onclick="addToCart('Blush On Make Over', 55000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G8.jpg" alt="Eye Shadow Palette">
+      <h3>Eye Shadow Palette</h3>
+      <p>Rp 55.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eye%20Shadow%20Palette')">Beli via WA</button>
+      <button onclick="addToCart('Eye Shadow Palette', 55000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G9.jpg" alt="Cheer Blossom Blush">
+      <h3>Cheer Blossom Blush</h3>
+      <p>Rp 25.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Cheer%20Blossom%20Blush')">Beli via WA</button>
+      <button onclick="addToCart('Cheer Blossom Blush', 25000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G10.jpg" alt="Blush On Coral">
+      <h3>Blush On Coral</h3>
+      <p>Rp 25.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Blush%20On%20Coral')">Beli via WA</button>
+      <button onclick="addToCart('Blush On Coral', 25000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G12.jpg" alt="Blush On Matte">
+      <h3>Blush On Matte</h3>
+      <p>Rp 30.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Blush%20On%20Matte')">Beli via WA</button>
+      <button onclick="addToCart('Blush On Matte', 30000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G13.jpg" alt="Eyebrow Make Over">
+      <h3>Eyebrow Make Over</h3>
+      <p>Rp 65.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eyebrow%20Make%20Over')">Beli via WA</button>
+      <button onclick="addToCart('Eyebrow Make Over', 65000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G14.jpg" alt="Contour Make Over">
+      <h3>Contour Make Over</h3>
+      <p>Rp 75.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Contour%20Make%20Over')">Beli via WA</button>
+      <button onclick="addToCart('Contour Make Over', 75000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G15.jpg" alt="Eye Brow Make Over">
+      <h3>Eye Brow Make Over</h3>
+      <p>Rp 45.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eye%20Brow%20Make%20Over')">Beli via WA</button>
+      <button onclick="addToCart('Eye Brow Make Over', 45000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G16.jpg" alt="Eyebrow">
+      <h3>Eyebrow</h3>
+      <p>Rp 25.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eyebrow')">Beli via WA</button>
+      <button onclick="addToCart('Eyebrow', 25000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G17.jpg" alt="Maskara Sweatproof">
+      <h3>Maskara Sweatproof</h3>
+      <p>Rp 28.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Maskara%20Sweatproof')">Beli via WA</button>
+      <button onclick="addToCart('Maskara Sweatproof', 28000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G18.jpg" alt="Colorfull Eyeshadow">
+      <h3>Colorfull Eyeshadow</h3>
+      <p>Rp 40.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Colorfull%20Eyeshadow')">Beli via WA</button>
+      <button onclick="addToCart('Colorfull Eyeshadow', 40000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G19.jpg" alt="color Corrector">
+      <h3>color Corrector</h3>
+      <p>Rp 75.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20color%20Corrector')">Beli via WA</button>
+      <button onclick="addToCart('color Corrector', 75000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G20.jpg" alt="Eye Glitter">
+      <h3>Eye Glitter</h3>
+      <p>Rp 45.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eye%20Glitter')">Beli via WA</button>
+      <button onclick="addToCart('Eye Glitter', 45000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G21.jpg" alt="Glitter Palette">
+      <h3>Glitter Palette</h3>
+      <p>Rp 45.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Glitter%20Palette')">Beli via WA</button>
+      <button onclick="addToCart('Glitter Palette', 45000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G22.jpg" alt="Eyeshadow Palette Natural">
+      <h3>Eyeshadow Palette Natural</h3>
+      <p>Rp 85.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eyeshadow%20Palette%20Natural')">Beli via WA</button>
+      <button onclick="addToCart('Eyeshadow Palette Natural', 85000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G23.jpg" alt="Blush 3 Color">
+      <h3>Blush 3 Color</h3>
+      <p>Rp 35.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Blush%203%20Color')">Beli via WA</button>
+      <button onclick="addToCart('Blush 3 Color', 35000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G24.jpg" alt="Lipstik Velvet Matte">
+      <h3>Lipstik Velvet Matte</h3>
+      <p>Rp 45.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipstik%20Velvet%20Matte')">Beli via WA</button>
+      <button onclick="addToCart('Lipstik Velvet Matte', 45000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G25.jpg" alt="OMG Lipstik Ombre">
+      <h3>OMG Lipstik Ombre</h3>
+      <p>Rp 30.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipstik%20Matte')">Beli via WA</button>
+      <button onclick="addToCart('Promo Set Make Up', 400000)">Tambah ke Keranjang</button>
+    </div>
+      
+    <div class="product-card">
+      <img src="G26.jpg" alt="Pinkflash Lip Velvet">
+      <h3>Pinkflash Lip Velvet</h3>
+      <p>Rp 17.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Pinkflash%20Lip%20Velvet')">Beli via WA</button>
+      <button onclick="addToCart('Pinkflash Lip Velvet', 17000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G27.jpg" alt="Velvet Lipstik">
+      <h3>Velvet Lipstik</h3>
+      <p>Rp 30.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Velvet%20Lipstik')">Beli via WA</button>
+      <button onclick="addToCart('Velvet Lipstik', 30000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G28.jpg" alt="Hanasui Lip Matte">
+      <h3>Hanasui Lip Matte</h3>
+      <p>Rp 25.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Hanasui%20Lip%20Matte')">Beli via WA</button>
+      <button onclick="addToCart('Hanasui Lip Matte', 25000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G29.jpg" alt="Lipgloss Plumpy">
+      <h3>Lipgloss Plumpy</h3>
+      <p>Rp 37.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipgloss%20Plumpy')">Beli via WA</button>
+      <button onclick="addToCart('Lipgloss Plumpy', 37000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G30.jpg" alt="Pinkflash Ombre">
+      <h3>Pinkflash Ombre</h3>
+      <p>Rp 27.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Pinkflash%20Ombre')">Beli via WA</button>
+      <button onclick="addToCart('Pinkflash Ombre', 27000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G31.jpg" alt="Lipstik YSL">
+      <h3>Lipstik YSL</h3>
+      <p>Rp 97.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipstik%20YSL')">Beli via WA</button>
+      <button onclick="addToCart('Lipstik YSL', 97000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G32.jpg" alt="Lipstik Purbasari">
+      <h3>Lipstik Purbasari</h3>
+      <p>Rp 27.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipstik%20Purbasari')">Beli via WA</button>
+      <button onclick="addToCart('Lipstik Purbasari', 27000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G33.jpg" alt="Lipstik Dobby">
+      <h3>Lipstik Dobby</h3>
+      <p>Rp 37.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipstik%20Dobby')">Beli via WA</button>
+      <button onclick="addToCart('Lipstik Dobby', 37000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G34.jpg" alt="Red Love">
+      <h3>Red Love</h3>
+      <p>Rp 33.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Red%20Love')">Beli via WA</button>
+      <button onclick="addToCart('Red Love', 33000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G35.jpg" alt="Viva Perfect Matte Lipstik">
+      <h3>Viva Perfect Matte Lipstik</h3>
+      <p>Rp 30.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Viva%20Perfect%20Matte%20Lipstik')">Beli via WA</button>
+      <button onclick="addToCart('Viva Perfect Matte Lipstik', 30000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G36.jpg" alt="Lipgloss Vit">
+      <h3>Lipgloss Vit</h3>
+      <p>Rp 34.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipgloss%20Vit')">Beli via WA</button>
+      <button onclick="addToCart('Lipgloss Vit', 34000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G37.jpg" alt="Lip Serum">
+      <h3>Lip Serum</h3>
+      <p>Rp 32.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lip%20Serum')">Beli via WA</button>
+      <button onclick="addToCart('Lip Serum', 32000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G38.jpg" alt="Liptint Glossy">
+      <h3>Liptint Glossy</h3>
+      <p>Rp 31.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Liptint%20Glossy')">Beli via WA</button>
+      <button onclick="addToCart('Liptint Glossy', 31000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G39.jpg" alt="Lipbalm Pink">
+      <h3>Lipbalm Pink</h3>
+      <p>Rp 36.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipbalm%20Pink')">Beli via WA</button>
+      <button onclick="addToCart('Lipbalm Pink', 36000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G40.jpg" alt="Lipgloss Colection">
+      <h3>Lipgloss Colection</h3>
+      <p>Rp 37.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipgloss%20Colection')">Beli via WA</button>
+      <button onclick="addToCart('Lipgloss Colection', 37000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G41.jpg" alt="Lip Oil">
+      <h3>Lip Oil</h3>
+      <p>Rp 28.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lip%20Oil')">Beli via WA</button>
+      <button onclick="addToCart('Lip Oil', 28000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G42.jpg" alt="Eyeliner Pinkflash">
+      <h3>Eyeliner Pinkflash</h3>
+      <p>Rp 17.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eyeliner%20Pinkflash')">Beli via WA</button>
+      <button onclick="addToCart('Eyeliner Pinkflash', 17000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G43.jpg" alt="Eyeliner Somethinc">
+      <h3>Eyeliner Somethinc</h3>
+      <p>Rp 30.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eyeliner%20Somethinc')">Beli via WA</button>
+      <button onclick="addToCart('Eyeliner Somethinc', 30000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G44.jpg" alt="Eyeliner Brown">
+      <h3>Eyeliner Brown</h3>
+      <p>Rp 17.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Eyeliner%20Brown')">Beli via WA</button>
+      <button onclick="addToCart('Eyeliner Brown', 17000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="lipstik1.jpeg" alt="Lipstik Matte">
+      <h3>Lipstik Matte</h3>
+      <p>Rp 25.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Lipstik%20Matte')">Beli via WA</button>
+      <button onclick="addToCart('Lipstik Matte', 25000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G57.jpg" alt="Cushion Skintific">
+      <h3>Cushion Skintific</h3>
+      <p>Rp 155.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Cushion%20Skintific')">Beli via WA</button>
+      <button onclick="addToCart('Cushion Skintific', 155000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G59.jpg" alt="Maskara Waterproof">
+      <h3>Maskara Waterproof</h3>
+      <p>Rp 29.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Maskara%20Waterproof')">Beli via WA</button>
+      <button onclick="addToCart('Maskara Waterproof', 29000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G62.jpg" alt="Blush On Saniye">
+      <h3>Blush On Saniye</h3>
+      <p>Rp 27.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Blush%20On%20Saniye')">Beli via WA</button>
+      <button onclick="addToCart('Blush On Saniye', 27000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G61.jpg" alt="Highlighter Saniye">
+      <h3>Highlighter Saniye</h3>
+      <p>Rp 34.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Highlighter%20Saniye')">Beli via WA</button>
+      <button onclick="addToCart('Highlighter Saniye', 34000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G60.jpg" alt="Fit Me Concealer">
+      <h3>Fit Me Concealer</h3>
+      <p>Rp 300.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Fit%20Me%20Concealer')">Beli via WA</button>
+      <button onclick="addToCart('Fit Me Concealer', 300000)">Tambah ke Keranjang</button>
+    </div>
+  </section>
+
+  <!-- Kategori Skin Care -->
+  <section class="products">
+    <h2 class="category-title" id="skincare">Skin Care</h2>
+    
+    <div class="product-card">
+      <img src="G58.jpg" alt="Toner Wajah Npure">
+      <h3>Toner Wajah Npure</h3>
+      <p>Rp 42.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Toner%20Wajah%20Npure')">Beli via WA</button>
+      <button onclick="addToCart('Toner Wajah Npure', 42000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="serumwajah1.jpg" alt="Serum Wajah">
+      <h3>Serum Wajah</h3>
+      <p>Rp 40.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Serum%20Wajah')">Beli via WA</button>
+      <button onclick="addToCart('Serum Wajah', 40000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G52.jpg" alt="Moisturizer Skintific Ceramide">
+      <h3>Moisturizer Skintific Ceramide</h3>
+      <p>Rp 150.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Moisturizer%20Skintific%20Ceramide')">Beli via WA</button>
+      <button onclick="addToCart('Moisturizer Skintific Ceramide', 150000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G51.jpg" alt="Moisturizer Wardah">
+      <h3>Moisturizer Wardah</h3>
+      <p>Rp 55.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Moisturizer%20Wardah')">Beli via WA</button>
+      <button onclick="addToCart('Moisturizer Wardah', 55000)">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="G46.jpg" alt="Sheet Mask Bioaqua">
+      <h3>Sheet Mask Bioaqua</h3>
+      <p>Rp 5.000</p>
+      <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Sheet%20Mask%20Bioaqua')">Beli via WA</button>
+      <button onclick="addToCart('Sheet Mask Bioaqua', 5000)">Tambah ke Keranjang</button>
+    </div>
+
+  <div class="product-card">
+    <img src="G47.jpg" alt="Sheet Mask Blue">
+    <h3>Sheet Mask Blue</h3>
+    <p>Rp 7.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Sheet%20Mask%20Blue')">Beli via WA</button>
+    <button onclick="addToCart('Sheet Mask Blue', 7000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="G48.jpg" alt="Himalaya Clay Mask">
+    <h3>Himalaya Clay Mask</h3>
+    <p>Rp 27.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Himalaya%20Clay%20Mask')">Beli via WA</button>
+    <button onclick="addToCart('Himalaya Clay Mask', 27000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="G49.jpg" alt="Garnier MEN Charcoal Mask">
+    <h3>Garnier MEN Charcoal Mask</h3>
+    <p>Rp 17.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Garnier%20MEN%20Charcoal%20Mask')">Beli via WA</button>
+    <button onclick="addToCart('Garnier MEN Charcoal Mask', 17000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="G50.jpg" alt="Moisturizer Skintific">
+    <h3>Moisturizer Skintific</h3>
+    <p>Rp 150.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Moisturizer%20Skintific')">Beli via WA</button>
+    <button onclick="addToCart('Moisturizer Skintific', 150000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="Facialwash1.jpeg" alt="Facial Wash">
+    <h3>Facial Wash</h3>
+    <p>Rp 30.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Facial%20Wash')">Beli via WA</button>
+    <button onclick="addToCart('Facial Wash', 30000)">Tambah ke Keranjang</button>
+  </div>
+</section>
+
+<!-- Kategori Body Care -->
+<section class="products">
+  <h2 class="category-title" id="bodycare">Body Care</h2>
+  
+  <div class="product-card">
+    <img src="G53.jpg" alt="Body Lotion Slavina">
+    <h3>Body Lotion Slavina</h3>
+    <p>Rp 75.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Body%20Lotion%20Slavina')">Beli via WA</button>
+    <button onclick="addToCart('Body Lotion Slavina', 75000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="G54.jpg" alt="Body Lotion Nivea">
+    <h3>Body Lotion Nivea</h3>
+    <p>Rp 60.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Body%20Lotion%20Nivea')">Beli via WA</button>
+    <button onclick="addToCart('Body Lotion Nivea', 60000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="G55.jpg" alt="Body Lotion Vaseline">
+    <h3>Body Lotion Vaseline</h3>
+    <p>Rp 70.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Body%20Lotion%20Vaseline')">Beli via WA</button>
+    <button onclick="addToCart('Body Lotion Vaseline', 70000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="G56.jpg" alt="Body Lotion Citra">
+    <h3>Body Lotion Citra</h3>
+    <p>Rp 20.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Body%20Lotion%20Citra')">Beli via WA</button>
+    <button onclick="addToCart('Body Lotion Citra', 20000)">Tambah ke Keranjang</button>
+  </div>
+</section>
+
+<!-- Kategori Hair Care -->
+<section class="products">
+  <h2 class="category-title" id="haircare">Hair Care</h2>
+  
+  <div class="product-card">
+    <img src="SH.jpg" alt="Shampoo Herbal">
+    <h3>Shampoo Herbal</h3>
+    <p>Rp 45.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Shampoo%20Herbal')">Beli via WA</button>
+    <button onclick="addToCart('Shampoo Herbal', 45000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="CN.jpg" alt="Conditioner Nourishing">
+    <h3>Conditioner Nourishing</h3>
+    <p>Rp 50.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Conditioner%20Nourishing')">Beli via WA</button>
+    <button onclick="addToCart('Conditioner Nourishing', 50000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="HS.jpg" alt="Hair Serum">
+    <h3>Hair Serum</h3>
+    <p>Rp 60.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Hair%20Serum')">Beli via WA</button>
+    <button onclick="addToCart('Hair Serum', 60000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="PAK.jpg" alt="Pantene Anti Ketombe">
+    <h3>Pantene Anti Ketombe</h3>
+    <p>Rp 45.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Pantene%20Anti%20Ketombe')">Beli via WA</button>
+    <button onclick="addToCart('Pantene Anti Ketombe', 45000)">Tambah ke Keranjang</button>
+  </div>
+
+  <div class="product-card">
+    <img src="PRR.jpg" alt="Pantene Rambut Rontok">
+    <h3>Pantene Rambut Rontok</h3>
+    <p>Rp 50.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Pantene%20Rambut%20Rontok')">Beli via WA</button>
+    <button onclick="addToCart('Pantene Rambut Rontok', 50000)">Tambah ke Keranjang</button>
+  </div>
+
+  <div class="product-card">
+    <img src="PHG.jpg" alt="Pantene Hitam Glow">
+    <h3>Pantene Hitam Glow</h3>
+    <p>Rp 55.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Pantene%20Hitam%20Glow')">Beli via WA</button>
+    <button onclick="addToCart('Pantene Hitam Glow', 55000)">Tambah ke Keranjang</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="PRK.jpg" alt="Pantene Rambut Kering">
+    <h3>Pantene Rambut Kering</h3>
+    <p>Rp 48.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Pantene%20Rambut%20Kering')">Beli via WA</button>
+    <button onclick="addToCart('Pantene Rambut Kering', 48000)">Tambah ke Keranjang</button>
+  </div>
+  <div class="product-card">
+    <img src="PHL.jpg" alt="Pantene Halus Lembut">
+    <h3>Pantene Halus Lembut</h3>
+    <p>Rp 52.000</p>
+    <button onclick="window.open('https://wa.me/6282299218932?text=Halo%20saya%20ingin%20pesan%20Pantene%20Halus%20Lembut')">Beli via WA</button>
+    <button onclick="addToCart('Pantene Halus Lembut', 52000)">Tambah ke Keranjang</button>
+  </div>
+
+</section>
+
+<script>
+  function addToCart(namaProduk, hargaProduk) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ nama: namaProduk, harga: hargaProduk });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(namaProduk + ' ditambahkan ke keranjang!');
+  }
+</script>
+
+</body>
+</html>
